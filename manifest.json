@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Price Spread Watcher",
+  "version": "1.0",
+  "description": "实时监控成交记录价差，浮窗提示 + 状态变更声音提醒。",
+  "icons": {
+    "48": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.binance.com/zh-CN/alpha/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["notifications", "storage", "activeTab"],
+  "action": {
+    "default_title": "Price Spread Watcher"
+  }
+}
